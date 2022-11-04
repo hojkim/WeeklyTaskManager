@@ -1,4 +1,4 @@
-# Weekly Planner 📝
+# [Weekly Planner](https://hojkim.github.io/weeklyplanner/) 📝 
 
 ### Plan out your week and mark off the tasks you've completed through this simple and interactive planner app!
 
