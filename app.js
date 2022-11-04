@@ -3,6 +3,7 @@ const taskInput = document.querySelector(".task-input");
 const taskButton = document.querySelector(".task-button");
 const dayFilter = document.querySelector(".filter-day");
 const taskFilter = document.querySelector(".filter-task");
+const clearButton = document.querySelector(".clear-btn");
 
 // Global Variables
 let list = document.querySelector(".task-list");
@@ -14,6 +15,7 @@ taskButton.addEventListener("click", addTask);
 list.addEventListener("click", checkDelete);
 dayFilter.addEventListener("click", filterDays);
 taskFilter.addEventListener("click", filterTasks);
+clearButton.addEventListener("click", clearTasks);
 
 // Functions
 
@@ -266,4 +268,27 @@ function deleteTasks(task, day) {
    // splice method removes 1 element from the index specified in the first element
    tasks[day].splice(tasks[day].indexOf(taskText), 1);
    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
+
+// Removes all current tasks on the weekly task list and resets the local storage to default
+function clearTasks() {
+   const currentTasks = document.querySelectorAll(".task");
+   console.log(currentTasks);
+   currentTasks.forEach(function (task) {
+      task.classList.add("removed");
+   });
+
+   localStorage.clear();
+   localStorage.setItem(
+      "tasks",
+      JSON.stringify({
+         mon: [],
+         tues: [],
+         wed: [],
+         thur: [],
+         fri: [],
+         sat: [],
+         sun: [],
+      })
+   );
 }

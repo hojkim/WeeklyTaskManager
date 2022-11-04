@@ -190,6 +190,40 @@ form {
    margin: auto 0;
 }
 
+.clear-btn {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin: auto 0.75rem;
+   border-color: white;
+   border-style: solid;
+   border-radius: 0.2rem;
+   background-color: transparent;
+   color: white;
+   font-size: 1.4rem;
+   cursor: pointer;
+   transition: all 0.3s ease;
+}
+
+.fa-circle-xmark {
+   margin: 0.275rem 0.25rem;
+}
+
+.clear-all-text {
+   margin: auto 0.5rem auto 0;
+   display: none;
+   transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+   color: #b8c0ff;
+   background-color: white;
+}
+
+.clear-btn:hover .clear-all-text {
+   display: block;
+}
+
 .days {
    display: flex;
    flex-wrap: wrap;
