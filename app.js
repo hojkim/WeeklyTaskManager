@@ -5,6 +5,10 @@ const dayFilter = document.querySelector(".filter-day");
 const taskFilter = document.querySelector(".filter-task");
 const clearButton = document.querySelector(".clear-btn");
 
+alert(
+   "Currently does not work properly with MacOS browsers. Will be fixing soon. Apologies."
+);
+
 // Global Variables
 let list = document.querySelector(".task-list");
 
